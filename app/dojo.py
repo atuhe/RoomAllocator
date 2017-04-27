@@ -39,7 +39,15 @@ class Dojo(object):
                 print("person {0} already exists".format(person_name))
                 return
 
-
+                # Check if person is staff and wants accommodation.
+                if person_type == 'fellow':
+                    new_fellow = Fellow (person_name)
+                    print("Fellow {0} has been created succesfully".format(person_name))
+                    self.all_people.append (new_fellow)
+                elif person_type == 'staff':
+                    new_staff = Staff(person_name)
+                    print("Staff {0} has been created succesfully".format(person_name))
+                    self.all_people.append(new_staff)
 
         def print_room(self, room_name):
             # prints a room and all the people allocated to that room
