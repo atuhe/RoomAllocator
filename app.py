@@ -2,7 +2,7 @@
 Usage:
     RoomAllocator create_room <room_type> <room_name>...
     RoomAllocator add_person <person_name> <person_type> [<wants_accommodation>]
-    RoomAllocator print_room <room_name>
+    RoomAllocator print_room <room_name>...
     RoomAllocator
     RoomAllocator (-h | --help | --version)
 Options:
@@ -65,20 +65,17 @@ class RoomAllocator (cmd.Cmd):
         dojo.add_person(person_name, person_type, wants_accommodation)
 
 
-    # @docopt_cmd
-    # def do_add_person(self, args):
-    #     """Usage: add_person <first_name> <last_name> <FELLOW|STAFF> [wants_accommodation]
-    #     """
-    #     print(args)
-    #     # if args[]
-    #     pass
-
     @docopt_cmd
     def do_print_room(self, arg):
-        """ Usage: print_room <room_name>"""
+        """ Usage: print_room <room_name>..."""
         room_name = arg["<room_name>"]
         dojo.print_room(room_name)
 
+    @docopt_cmd
+    def do_print_allocations(self, arg):
+        """ Usage: print_room <room_name>..."""
+        room_name = arg["<room_name>"]
+        dojo.print_room(room_name)
 
 
 
