@@ -69,6 +69,11 @@ class RoomAllocator (cmd.Cmd):
         room_name = arg["<room_name>"]
         dojo.print_room(room_name)
 
+    @docopt_cmd
+    def do_print_allocations(self, arg):
+        """Usage: print_allocations[-o = filename]​"""
+        room_name = arg["<>"]
+
 
     def do_quit(self, arg):
         """Quits out of Interactive Mode."""
