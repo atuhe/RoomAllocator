@@ -5,15 +5,13 @@ class Person(object):
         self.person_type = person_type
 
 class Fellow(Person):
-    def __init__(self, person_id, person_name):
-        self.person_id = person_id
+    def __init__(self, person_name):
         self.person_name = person_name
         self.person_type = "fellow"
 
 
 class Staff(Person):
-    def __init__(self, person_id, person_name):
-        self.person_id = person_id
+    def __init__(self, person_name):
         self.person_name = person_name
         self.person_type = "staff"
 

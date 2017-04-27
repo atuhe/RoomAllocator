@@ -27,18 +27,17 @@ class Dojo(object):
                     self.all_rooms.append(new_livingspace)
                     print("{} {} has been successfully created!".format(room_type, room_name))
 
+        def add_person(self, person_name, person_type, wants_accomodation):
+            if not wants_accomodation:
+                wants_accomodation = 'N'
+            else:
+                wants_accomodation = wants_accomodation.upper()
+            print("Creating a person")
 
-        def add_person(self, person_id, person_name, person_type, wants_accomodation='N'):
-            """Usage: add_person <person_name> <FELLOW|STAFF> [wants_accommodation]"""
             #Add person to the system
-            if person_name in self.all_people:
-                print('person{}already exists')
-
-                # Check if person is staff and wants accommodation.
-            elif person_type == 'fellow' and wants_accomodation == 'Y':
-                new_fellow = Fellow(person_name, person_type)
-                self.aal_people.append(new_fellow)
-
+            if person_name in [person for person in self.all_people if person.person_name == person_name]:
+                print("person {0} already exists".format(person_name))
+                return
 
 
 

@@ -1,7 +1,7 @@
 """
 Usage:
     RoomAllocator create_room <room_type> <room_name>...
-    RoomAllocator add_person <person_name> <person_type> [wants_accommodation]
+    RoomAllocator add_person <person_name> <person_type> [<wants_accommodation>]
     RoomAllocator print_room <room_name>
     RoomAllocator
     RoomAllocator (-h | --help | --version)
@@ -58,10 +58,20 @@ class RoomAllocator (cmd.Cmd):
 
     @docopt_cmd
     def do_add_person(self, arg):
-        """Usage: add_person <person_name> <person_type> [wants_accommodation]"""
+        """Usage: add_person <person_name> <person_type> [<wants_accommodation>]"""
         person_name = arg["<person_name>"]
         person_type = arg["<person_type>"]
-        dojo.add_person(person_name, person_type, wants_accomodation='N')
+        wants_accommodation = arg["<wants_accommodation>"]
+        dojo.add_person(person_name, person_type, wants_accommodation)
+
+
+    # @docopt_cmd
+    # def do_add_person(self, args):
+    #     """Usage: add_person <first_name> <last_name> <FELLOW|STAFF> [wants_accommodation]
+    #     """
+    #     print(args)
+    #     # if args[]
+    #     pass
 
     @docopt_cmd
     def do_print_room(self, arg):
@@ -69,10 +79,7 @@ class RoomAllocator (cmd.Cmd):
         room_name = arg["<room_name>"]
         dojo.print_room(room_name)
 
-    @docopt_cmd
-    def do_print_allocations(self, arg):
-        """Usage: print_allocations[-o = filename]​"""
-        room_name = arg["<>"]
+
 
 
     def do_quit(self, arg):
