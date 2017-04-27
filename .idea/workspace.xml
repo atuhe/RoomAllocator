@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7af7f59e-1dd1-4c51-bbff-d7df51111722" name="Default" comment="Added print room command in app.py">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/dojo.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app.py" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/Dojo_app/dojo.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/test_dojo.py" afterPath="$PROJECT_DIR$/Tests/test_dojo.py" />
@@ -55,8 +55,8 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="62" column="42" lean-forward="true" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
+            <state relative-caret-position="220">
+              <caret line="68" column="31" lean-forward="true" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
               <folding>
                 <element signature="e#347#357#0" expanded="true" />
               </folding>
@@ -154,8 +154,8 @@
         <option value="$PROJECT_DIR$/app/person.py" />
         <option value="$PROJECT_DIR$/Tests/test_person.py" />
         <option value="$PROJECT_DIR$/Tests/test_room.py" />
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/app/dojo.py" />
+        <option value="$PROJECT_DIR$/app.py" />
       </list>
     </option>
   </component>
@@ -433,7 +433,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493287456248</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="created a new directory called app that replaces Dojo_app">
+      <created>1493291405625</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1493291405625</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -477,7 +484,8 @@
     <MESSAGE value="updated rooms.py" />
     <MESSAGE value="updated person.py" />
     <MESSAGE value="Added tests for testrooms for maximum living room occupants" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added tests for testrooms for maximum living room occupants" />
+    <MESSAGE value="created a new directory called app that replaces Dojo_app" />
+    <option name="LAST_COMMIT_MESSAGE" value="created a new directory called app that replaces Dojo_app" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -689,8 +697,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="62" column="42" lean-forward="true" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
+        <state relative-caret-position="220">
+          <caret line="68" column="31" lean-forward="true" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
           <folding>
             <element signature="e#347#357#0" expanded="true" />
           </folding>
