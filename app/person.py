@@ -1,5 +1,3 @@
-import Dojo_app
-
 class Person(object):
     def __init__(self, person_id, person_name, person_type):
         self.person_id = person_id
@@ -8,9 +6,14 @@ class Person(object):
 
 class Fellow(Person):
     def __init__(self, person_id, person_name):
-        super(Fellow, self).__init__(person_id, person_name, person_type='F')
+        self.person_id = person_id
+        self.person_name = person_name
+        self.person_type = "fellow"
+
 
 class Staff(Person):
     def __init__(self, person_id, person_name):
-        super(Staff, self).__init__(person_id, person_name, person_type='S')
+        self.person_id = person_id
+        self.person_name = person_name
+        self.person_type = "staff"
 
