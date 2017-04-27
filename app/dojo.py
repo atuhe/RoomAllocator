@@ -10,8 +10,8 @@ class Dojo(object):
             self.all_rooms = []
             self.staffs = []
             self.fellows = []
-            self.all_people = {}
-            self.unallocated_person = {}
+            self.all_people = []
+            self.unallocated_person = []
 
         def create_room(self, room_type, room_list):
             """Usage: create_room <room_type> <room_name>..."""
@@ -35,78 +35,12 @@ class Dojo(object):
                 print('person{}already exists')
 
                 # Check if person is staff and wants accommodation.
-            elif person_type == 'F' and wants_accomodation == 'Y':
+            elif person_type == 'fellow' and wants_accomodation == 'Y':
                 new_fellow = Fellow(person_name, person_type)
-                self.all_people[new_fellow.person_name] = person_type
-                self.append(new_fellow.person_name)
+                self.aal_people.append(new_fellow)
 
-                random_office = self.generate_random_office()
-                random_ls = self.generate_random_living_space()
 
-                if not random_office and not random_ls:
-                    self.unnalocated_person[new_fellow.person_name] = person_type
-                    print('Added%s to unnallocated list')
 
-                elif not random_office and random_ls:
-                    self.unnalocated_person[new_fellow.person_name] = person_type
-                    print('Added%s to unnallocated list')
-                    self.ls_rooms[random_ls].append(new_fellow.person_name)
-                    print("Added: %s and allocated them to a living space %s: " % (new_fellow.person_name, random_ls))
-
-                elif not random_ls and random_office:
-                    self.unallocated_person[new_fellow.person_name] = person_type
-                    print('Added %s to the unallocated list' % new_fellow.person_name)
-                    self.office_rooms[random_office].append(new_fellow.person_name)
-                    print("Added: %s and allocated them to an office %s: " % (new_fellow.person_name, random_office))
-
-                else:
-                    self.office_rooms[random_office].append(new_fellow.person_name)
-                    print("Added: %s and allocated them to %s: " % (new_fellow.person_name, random_office))
-                    self.ls_rooms[random_ls].append(new_fellow.person_name)
-                    print("Added: %s and allocated them to %s: " % (new_fellow.person_name, random_ls))
-
-                #when person type is a Fellow"""
-            elif person_type == 'F':
-                new_fellow = Fellow(person_id, person_name)
-                self.all_people[new_fellow.person_name] = person_type
-                self.fellows.append(new_fellow.person_name)
-                random_office = self.generate_random_office()
-
-                if not random_office:
-                    self.unallocated_person[new_fellow.person_name] = person_type
-                    print('Added %s to the unallocated list' % new_fellow.person_name)
-                else:
-                    self.office_rooms[random_office].append(new_fellow.person_name)
-                    print("Added: %s and allocated them to %s: " % (new_fellow.person_name, random_office))
-
-            elif person_type == 'S' and wants_accomodation == 'Y':
-                new_staff = Staff(person_id, person_name)
-                self.all_people[new_staff.person_name] = person_type
-                self.staffs.append(new_staff.person_name)
-                random_office = self.generate_random_office()
-
-                if not random_office:
-                    self.unallocated_person[new_staff.person_name] = person_type
-                    print('Staff cannot be located a living space')
-                else:
-                    self.office_rooms[random_office].append(new_staff.person_name)
-                    print('Staff cannot be located a living space')
-
-                #When the person is a Staff
-            elif person_type == 'S':
-                new_staff = Staff(person_id, person_name)
-                self.all_people[new_staff.person_name] = person_type
-                self.staffs.append(new_staff.person_name)
-                random_office = self.generate_random_office()
-                if not random_office:
-                    self.unallocated_person[new_staff.person_name] = person_type
-                    print('Added %s to the unallocated list' % new_staff.person_name)
-                else:
-                    self.office_rooms[random_office].append(new_staff.person_name)
-                    print("Added: %s and allocated them to %s: " % (new_staff.person_name, random_office))
-
-            else:
-                print('%s is not a valid position.' % person_type)
 
         def print_room(self, room_name):
             # prints a room and all the people allocated to that room
