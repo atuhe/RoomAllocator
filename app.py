@@ -1,14 +1,17 @@
 """
 Usage:
     RoomAllocator create_room <room_type> <room_name>...
-    RoomAllocator add_person <person_name> <person_type> [<wants_accommodation>]
+    RoomAllocator add_person <first_name> <last_name> <person_type> [<wants_accommodation>]
     RoomAllocator print_room <room_name>...
-    RoomAllocator
+    RoomAllocator print_allocations [<filename>]
+    RoomAllocator load_people
+    RoomAllocator save_state [<database_name>]
+    RoomAllocator load_state <sqlite_database>
+    RoomAllocator 
     RoomAllocator (-h | --help | --version)
 Options:
     -i, --interactive  Interactive Mode
     -h, --help  Show this screen and exit.
-
 """
 import sys
 import cmd
@@ -56,12 +59,18 @@ class RoomAllocator (cmd.Cmd):
         room_name = arg["<room_name>"]
         dojo.create_room(room_type, room_name)
 
+
     @docopt_cmd
     def do_add_person(self, arg):
-        """Usage: add_person <person_name> <person_type> [<wants_accommodation>]"""
-        person_name = arg["<person_name>"]
-        person_type = arg["<person_type>"]
-        wants_accommodation = arg["<wants_accommodation>"]
+        """Usage: add_person <first_name> <last_name> <person_type> [<wants_accommodation>]"""
+        first_name = arg['<first_name>']
+        last_name = arg['<last_name>']
+        person_type = arg['<person_type>']
+        person_name = first_name + " " + last_name
+        wants_accommodation = arg['<wants_accommodation>']
+
+        if wants_accommodation is None:
+            wants_accommodation = "N"
         dojo.add_person(person_name, person_type, wants_accommodation)
 
 
@@ -73,10 +82,21 @@ class RoomAllocator (cmd.Cmd):
 
     @docopt_cmd
     def do_print_allocations(self, arg):
-        """ Usage: print_room <room_name>..."""
-        room_name = arg["<room_name>"]
-        dojo.print_room(room_name)
+        """Usage: print_allocations [<filename>]"""
+        x = arg['<filename>']
+        dojo.print_allocations(x)
 
+    @docopt_cmd
+    def do_save_state(self, arg):
+        """Usage: save_state [<database_name>]"""
+        db_name = arg['<database_name>']
+        dojo.save_state(db_name)
+
+    @docopt_cmd
+    def do_load_state(self, arg):
+        """Usage: load_state <sqlite_database>"""
+        database_name = arg['<sqlite_database>']
+        dojo.load_state(database_name)
 
 
     def do_quit(self, arg):
