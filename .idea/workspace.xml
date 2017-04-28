@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7af7f59e-1dd1-4c51-bbff-d7df51111722" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dojo.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/text_file.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/test_dojo.py" afterPath="$PROJECT_DIR$/Tests/test_dojo.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/test_person.py" afterPath="$PROJECT_DIR$/Tests/test_person.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/dojo.py" afterPath="$PROJECT_DIR$/app/dojo.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/person.py" afterPath="$PROJECT_DIR$/app/person.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/rooms.py" afterPath="$PROJECT_DIR$/app/rooms.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -482,7 +479,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493307913497</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Submiited for review">
+      <created>1493374093361</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1493374093361</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -496,9 +500,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16334662" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16334662" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -554,7 +557,8 @@
     <MESSAGE value="Addded more functionality for the add_person function in dojo.py to identify if person is fellow or staff" />
     <MESSAGE value="added class to allocate rooms in person.py" />
     <MESSAGE value="if statement allocating rooms to staff members" />
-    <option name="LAST_COMMIT_MESSAGE" value="if statement allocating rooms to staff members" />
+    <MESSAGE value="Submiited for review" />
+    <option name="LAST_COMMIT_MESSAGE" value="Submiited for review" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
